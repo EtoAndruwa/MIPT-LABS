@@ -1,0 +1,61 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                            Dynamic AC of hpar                            ***
+***                           20.09.2023 14:37:11                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+AC Voltages at Frequency=1e+006 (Mag, Degrees)
+==============================================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1                0,0  2                0,0  3                0,0 
+4                0,0  5                0,0 
+
+
+AC values for Resistor (Mag, Degrees)
+=====================================
+Instance:               RL1           RL2           RR1           RR2           RL3
+
+Power AC Terms:
+PD                      0,0           0,0           0,0           0,0           0,0
+
+AC Pin Currents:
+Ir                      0,0           0,0           0,0           0,0           0,0
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               RR3
+
+Power AC Terms:
+PD                      0,0
+
+AC Pin Currents:
+Ir                      0,0
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+AC values for SPICE Source (Mag, Degrees)
+=========================================
+Instance:               I1            U2
+
+Power AC Terms:
+PG                     0,0           0,0
+
+AC Pin Currents:
+ISource                0,0           0,0
+
+

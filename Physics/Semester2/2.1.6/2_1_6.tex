@@ -1,0 +1,348 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{textcomp,mathcomp}
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{Huge}
+		\begin{center}
+			\textbf{Отчет о выполнении лабораторной работы 2.1.6}\\
+			\vspace{2em}
+			\textbf{Эффект Джоуля Томпсона}\\
+			\vspace{5em}
+			\textbf{Выполнил: }Тимонин Андрей\\
+			\textbf{Группа: }Б01-208\\
+			\vspace{9em}
+			\textbf{Дата: }03.05.2023\\
+		\end{center}
+	\end{Huge}
+	
+	\section{Введение}
+	\noindent\textbf{Цели работы:}	
+	\begin{enumerate}
+		\item Определение изменения температуры углекислого газа при протекании через малопроницаемую перегородку при разных начальных значениях давления и температуры;
+		\item Вычисление по результатам опытов коэффициентов Ван-дер-Ваальса «a» и «b».
+	\end{enumerate}
+	\bigskip
+	
+	\noindent\textbf{В работе используются:}
+	\begin{enumerate}
+		\item трубка с пористой перегородкой;
+		\item труба Дьюара;
+		\item термостат;
+		\item термометры;
+		\item микровольтметр;
+		\item балластный;
+		\item манометр;
+		\item дифференциальная термопара.
+	\end{enumerate}
+	\section{Теоретическая справка}
+	
+	Эффектом Джоуля-Томсона называется изменение температуры газа, медленно протекающего из области высокого в область низкого давления в условиях хорошей тепловой изоляции.
+	
+	В работе исследуется изменение температуры идеального газа при его течении по трубке с пористой перегородкой (рис.1). 
+	
+	Рассматривая 2 произвольных сечения записываем уравнение 
+	\[A_1 - A_2 = \left( U_2 + \dfrac{\mu v_2^2}{2} \right) - \left( U_1 + \dfrac{\mu v_1^2}{2} \right) \]
+	Учитывая некоторые формулы мы получаем, что 
+	\[\mu_{D-T} = \dfrac{\Delta T}{\Delta P} \approx \dfrac{\dfrac{2a}{RT} - b}{C_p} \]
+	
+	При этом температура инверсии для газа Ван-дер-Ваальса:
+	\[ T_{\text{инв}} = \frac{2a}{Rb} \]
+	
+	\section{Экспериментальная установка}
+		\begin{center}
+		\includegraphics[width=14cm, height=8cm]{"1.jpg"}\\
+		Рис. 1 Схема экспериментальной установки\\
+		\end{center}
+	
+	\textbf{Некоторые элементы установки:}
+	\begin{enumerate}
+		\item трубка с пористой перегородкой 
+		\item пористая перегородка
+		\item труба Дьюара
+		\item кольцо
+		\item змеевик
+		\item балластный баллон
+		\item вольтметр
+		\item верхний спай термопары
+		\item нижний спай термопары
+		\item пробка из пенопласта
+	\end{enumerate}
+	
+	\section{Экспериментальные данные}
+	\begin{center}
+		\begin{tabular} {|c | c |c |}
+			\hline	
+			№ & $T$, мВ &  P, бар \\
+			\hline
+			1 & -0.126 $\pm$ 0.001 & 4.00 $\pm$ 0.05  \\
+			\hline
+			2 &-0.107	$\pm$ 0.001 & 3.50 $\pm$ 0.05  \\
+			\hline
+			3 & -0.092 $\pm$ 0.001 & 3.00 $\pm$ 0.05 \\
+			\hline
+			4 &-0.070 $\pm$ 0.001 &2.50  $\pm$ 0.05   \\
+			\hline
+		\end{tabular}\\
+		Таблица 1. Результаты измерение при температуре 20.74 \textcelsius
+	\end{center}
+
+	\begin{center}
+	\begin{tabular} {|c | c |c |}
+		\hline	
+		№ & $T$, мВ &  P, бар \\
+		\hline
+		1 & -0.132
+		$\pm$ 0.001 & 4.00 $\pm$ 0.05  \\
+		\hline
+		2 &-0.111
+		$\pm$ 0.001 & 3.50 $\pm$ 0.05  \\
+		\hline
+		3 &-0.095
+		$\pm$ 0.001 & 3.00 $\pm$ 0.05  \\
+		\hline
+		4 & -0.075
+		$\pm$ 0.001 & 2.50 $\pm$ 0.05  \\
+		\hline
+		5 & -0.053
+		
+		$\pm$ 0.001 & 2.00 $\pm$ 0.05  \\
+		\hline
+	\end{tabular}\\
+	Таблица 2. Результаты измерение при температуре 30.60 \textcelsius
+\end{center}
+
+	\begin{center}
+	\begin{tabular} {|c | c |c |}
+		\hline	
+			№ & $T$, мВ &  P, бар \\
+		\hline
+		1 &-0.126 $\pm$ 0.001 & 4.00 $\pm$ 0.05  \\
+		\hline
+		2 &-0.107 $\pm$ 0.001 & 3.50 $\pm$ 0.05  \\
+		\hline
+		3 & -0.088  $\pm$ 0.001 & 3.00 $\pm$ 0.05  \\
+		\hline
+		4 &-0.071 $\pm$ 0.001 & 2.50 $\pm$ 0.05  \\
+		\hline
+		5 &-0.060 $\pm$ 0.001 & 2.20 $\pm$ 0.05  \\
+		\hline
+	\end{tabular}\\
+	Таблица 3. Результаты измерение при температуре 40.60 \textcelsius
+\end{center}
+
+	\begin{center}
+	\begin{tabular} {|c | c |c |}
+		\hline	
+		№ & $T$, мВ &  P, бар \\
+		\hline
+		1 & -0.122
+		 $\pm$ 0.001 & 4.00 $\pm$ 0.05  \\
+		\hline
+		2 & -0.104
+		 $\pm$ 0.001 & 3.50 $\pm$ 0.05  \\
+		\hline
+		3 & -0.087
+		 $\pm$ 0.001 & 3.00 $\pm$ 0.05  \\
+		\hline
+		4 & -0.060
+		 $\pm$ 0.001 & 2.40 $\pm$ 0.05  \\
+		\hline
+		5 & -0.056 $\pm$ 0.001 & 2.00 $\pm$ 0.05  \\
+		\hline
+	\end{tabular}\\
+	Таблица 4. Результаты измерение при температуре 50.19 \textcelsius
+\end{center}
+
+
+\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}
+			[
+			width=13cm,
+			mark=square,
+			grid=major,
+			ylabel={$\bigtriangleup T$ , $\tccelsius$},
+			xlabel={$\bigtriangleup P$ , \text{бар}},
+			]
+			
+			\legend{20.74 \textcelsius, 30.06 \textcelsius, 40.06 \textcelsius, 50.19 \textcelsius}
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				4     -3.095823096          0.03
+				3.5     -2.628992629        	0.03	 
+				3   	-2.26044226 	0.03
+				2.5  	-1.71990172  	0.03      
+			};
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				4     -3.098591549   0.02
+				3.5     -2.605633803  	0.02	 
+				3   	-2.230046948  	0.02
+				2.5  	-1.76056338  	0.02
+				2.2		-1.244131455 	0.02     
+			};
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				4     -2.964705882 0		0.02
+				3.5     -2.517647059   		0.02	 
+				3   	-2.070588235 		0.02
+				2.5  	-1.670588235    	0.02
+				2		-1.411764706 		0.02     
+			};	
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				4     -2.817551963  	0.02 
+				3.5     -2.401847575  	0.02 	 
+				3   	-2.009237875  	0.02 
+				2.4  	-1.385681293  	0.02  
+				2		-1.29330254 	0.02      
+			};	
+			
+			\addplot[domain = 2:5]{-0.8993*x+0.4963}; 
+			\addplot[domain = 2:5]{-0.9108*x+0.5446};
+			\addplot[domain = 2:5]{-0.8599*x+0.4872};
+			\addplot[domain = 2:5]{-0.8021*x+0.4082};
+			
+			
+		\end{axis}
+	\end{tikzpicture}\\
+	График 1. Зависимость $\bigtriangleup T$ от $\bigtriangleup P$  в эксперименте
+\end{center}
+
+	\begin{center}
+		\includegraphics[width=15cm, height=4cm]{"Screenshot_1.jpg"}\\
+		Таблица 5. Зависимость чувствительности термопары медь-константан от температуры
+		\includegraphics[width=15cm, height=4cm]{"Screenshot_2.jpg"}
+		Таблица 6. Зависимость чувствительности термопары медь-константан от температуры
+	\end{center}
+	
+	Из графика имеем соответствующие коэффициенты:
+	\begin{itemize}
+		\item $\mu_{20.72}$ = 0.90 $\pm$ 0.05 $\frac{K}{\text{бар}}$
+		\item $\mu_{30.06}$ = 0.91 $\pm$ 0.03 $\frac{K}{\text{бар}}$ 
+		\item $\mu_{40.06}$ = 0.86 $\pm$ 0.06 $\frac{K}{\text{бар}}$
+		\item $\mu_{50.19}$ = 0.80 $\pm$ 0.06 $\frac{K}{\text{бар}}$
+	\end{itemize}
+
+	\begin{center}
+	\includegraphics[width=10cm, height=4cm]{"Screenshot_3.jpg"}\\
+	Таблица 6. Табличные данные коэффициента Джоуля-Томпсона для $CO_2$
+	\end{center}
+
+	Найдем относительные погрешности полученных данных:
+	
+	\begin{equation}
+		\begin{aligned}
+			\bigtriangleup \mu_{20.72} = \frac{|0.9 - 1.105|}{1.105} \cdot 100\% = 18\%
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+	\begin{aligned}
+		\bigtriangleup \mu_{30.06} = \frac{|0.91 - 1.031|}{1.031} \cdot 100\% = 12\%
+	\end{aligned}
+\end{equation}
+	\begin{equation}
+	\begin{aligned}
+		\bigtriangleup \mu_{40.06} = \frac{|0.86 - 0.958|}{0.958} \cdot 100\% = 10\%
+	\end{aligned}
+\end{equation}
+	\begin{equation}
+	\begin{aligned}
+		\bigtriangleup \mu_{50.19} = \frac{|0.80 - 0.898|}{0.898} \cdot 100\% = 11\%
+	\end{aligned}
+\end{equation}
+
+\noindent\textbf{Замечание:} Мы создавали разность давлений порядка 4 бар. Относительную погрешность можно считать с некоторым приближением относительно 1 атм.
+
+\begin{center}
+			\begin{tikzpicture}
+		\begin{axis}
+			[
+			width=13cm,
+			mark=square,
+			grid=major,
+			ylabel={$\mu$ , $\frac{K}{\text{бар}}$},
+			xlabel={$\frac{1}{T}$ , $\frac{1}{K}$},
+			]
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				0.00340     0.90          0.05
+				0.00330     0.91       	0.03
+				0.00319   	0.86 	0.06
+				0.00309  	0.8  	0.06      
+			};
+		
+		\addplot[domain = 0.003:0.00340]{337.3383*x-0.2272};
+			
+		\end{axis}
+	\end{tikzpicture}\\
+	График 2. Зависимость $\mu$ от $\frac{1}{T}$  
+\end{center}
+
+
+\noindent Табличные коэффициенты газа Ван-дер-Ваальса для углекислого газа:\\
+	\begin{equation}
+		\begin{aligned}
+				a = 0.36 \frac{\text{Па} \cdot \text{м}^6}{\text{моль}^2}\\
+				b = 4.2 \cdot 10^{-5} \frac{\text{м}^3}{\text{моль}}
+		\end{aligned}
+	\end{equation}
+  
+
+	
+	
+	\section{Выводы}
+	\begin{itemize}
+		\item Полученные коэффициенты Джоуля-Томпсона отличаются от табличных в интервале от 10-20 \%;
+		\item Углекислый газ действительно охлаждался в ходе эксперимента. Такое поведение подтверждает теорию;
+		\item Трение, которое возникает в пористой пробке, значительно влияет вначале эксперимента до момента установления температуры в трубке;
+		\item Полученные при расчете коэффициенты газа Ван-дер-Вальса имееют огромную погрешность и не соответствуют теории. Получить адекватную оценку температуры инверсии таким способом для углекислого газа невозможно.
+	\end{itemize}
+	
+\end{document}

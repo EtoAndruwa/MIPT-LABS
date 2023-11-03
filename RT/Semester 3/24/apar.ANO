@@ -1,0 +1,75 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                           AC Analysis of apar                            ***
+********************************************************************************
+Limits
+======
+Frequency Range          Auto 100,1
+Number of Points         51
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        Off
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1           998.385u  2             1.000   3           381.349u 
+4           145.662u  5            55.638u 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               R11           R12            R4           R15           R21
+V                 -999.002m     -617.036u     -235.687u      -90.024u     -998.385u
+Power DC Terms:
+PD                 998.004u      380.733p       55.548p        8.104p      996.772n
+
+DC Pin Currents:
+Ir                -999.002u     -617.036n     -235.687n      -90.024n     -998.385u
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:               R22           R23           R24             W
+V                 -381.349u     -145.662u      -55.638u      -55.638u
+Power DC Terms:
+PD                 145.427p       21.217p        3.096p        1.913p
+
+DC Pin Currents:
+Ir                -381.349n     -145.662n      -55.638n      -34.387n
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                   1.000 
+Power DC Terms:
+PG                999.002u
+
+DC Pin Currents:
+ISource          -999.002u
+
+

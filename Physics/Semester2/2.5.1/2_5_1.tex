@@ -1,0 +1,256 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{textcomp,mathcomp}
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{Huge}
+		\begin{center}
+			\textbf{Отчет о выполнении лабораторной работы 2.5.1}\\
+			\vspace{2em}
+			\textbf{Измерение коэффициента поверхностного натяжения жидкости}\\
+			\vspace{5em}
+			\textbf{Выполнил: }Тимонин Андрей\\
+			\textbf{Группа: }Б01-208\\
+			\vspace{9em}
+			\textbf{Дата: }20.04.2023\\
+		\end{center}
+	\end{Huge}
+	
+	\section{Введение}
+	\noindent\textbf{Цели работы:}
+		\begin{enumerate}
+			\item Измерение коэффициента поверхностного натяжения исследуемой жидкости при разной температуре с использованием известного коэффициента поверхностного коэффициента другой жидкости;
+			\item Определение полной поверхностной энергии и теплоты, необходимой для изотермического образования единицы поверхности жидкости.
+		\end{enumerate}
+	\bigskip
+	
+	\noindent\textbf{В работе используются:}
+		\begin{enumerate}
+			\item Прибор Ребиндера с термостатом;
+			\item Исследуемые жидкости;
+			\item Стаканы;
+			\item Микроскоп;
+			\item Линейка.
+		\end{enumerate}
+	\section{Экспериментальная установка}
+
+	\begin{center}
+		\includegraphics[width= 12cm, height= 8cm]{"Установка.jpg"}\\
+		Рис. 1 Схема экспериментальной установки
+	\end{center}
+	
+	\section{Экспериментальные данные}
+	
+	\subsection[Игла]{Измерение радиуса иглы}
+	\textbf{Измерим радиус иглы двумя способами:}
+	\begin{enumerate}
+		\item При помощи микроскопа;
+		\item Использую формулу и показания спиртового манометра.
+	\end{enumerate}
+
+	\textbf{При измерении микроскопом имеем:}
+	\begin{center}
+		\begin{tabular} {|c | c |c |}
+			\hline	
+			$d_{total}$, мм & $d_{inner}$, мм & $r_1$, мм \\
+			\hline
+			1.4 $\pm$ 0.1 & 1.2 $\pm$ 0.1 & 0.6 $\pm$ 0.1  \\
+			\hline
+		\end{tabular}\\
+		Таблица 1. Результаты измерение иглы микроскопом
+	\end{center}
+
+	\textbf{Используя формулу и полученные данные:}
+	\begin{center}
+		\begin{equation}
+			\begin{aligned}
+				r = \frac{2 \cdot \sigma}{P} 
+			\end{aligned}
+		\end{equation}
+	\end{center}
+	\text{Получаем:}
+	\begin{center}
+		\begin{equation}
+			\begin{aligned}
+				r_2 = \frac{2 \cdot 22.78}{44.0 \cdot 0.2 \cdot 9.80665} = 0.5
+			\end{aligned}
+		\end{equation}
+	\end{center}
+	Найдем погрешность $r_2$:
+	\begin{center}
+		\begin{equation}
+			\begin{aligned}
+				\bigtriangleup r_2 = \frac{1}{44.0} \cdot 0.50 = 0.01
+			\end{aligned}
+		\end{equation}
+	\end{center}
+	Значит  $r_2 = 0.50 \pm 0.01$ мм
+	\subsection[Установка]{Измерение температурной зависимости коэффициента поверхностного натяжения}
+	\begin{center}
+		\begin{tabular} {|c | c | c | c| c|c|c|}
+			\hline	
+			№ & $T, \tccelsius $ & h, мм  & $P$, Па  & $\sigma$, $\frac{\text{мН}}{\text{м}}$ & q,$\frac{\text{мН}}{\text{м}}$ & $\frac{U}{\text{П}}, \frac{\text{мН}}{\text{м}}$\\
+			\hline
+			1 & $ 21.7 \pm 0.1$ & $183.0 \pm 0.5$ & $358.9\pm 0.9$ & 89.7 &2.4
+			 &92.2
+			 
+			 	
+			 \\
+			\hline
+			2 & $ 25.7 \pm 0.1$ & $183.0\pm 0.5$ & $358.9\pm 0.9$ & 89.7 &2.8
+			 &92.6
+			 
+			\\
+			\hline
+			3 & $ 30.4\pm 0.1$ & $182.0\pm 0.5$ &$ 356.9\pm 0.9$ & 89.2 & 3.4
+			& 92.7
+			
+			 \\
+			\hline
+			4 & $ 35.4 \pm 0.1$ & $181.0\pm 0.5$ & $355.0\pm 0.9$ & 88.7 &3.9
+			 &92.7
+			 
+			\\
+			\hline
+			5 &$  40.4 \pm 0.1$ & $179.5\pm 0.5$ & $352.1\pm 0.9$ & 88.0 &4.5
+			 & 92.6
+			 
+			\\
+			\hline
+			6 & $ 45.3 \pm 0.1$ & $179.0\pm 0.5$ & $351.1\pm 0.9$ & 87.8 &5.1
+			 & 92.9
+			 
+			\\
+			\hline
+			7 & $ 51.0 \pm 0.1$ & $177.0\pm 0.5$ & $347.2\pm 0.9$ & 86.8 &5.7
+			 & 92.5
+			 
+			\\
+			\hline
+			8 & $ 55.2 \pm 0.1$ & $176.0\pm 0.5$ & $345.2\pm 0.5$ &  86.3 &6.2
+			 & 92.5
+			 
+			\\
+			\hline
+			9 & $ 60.0 \pm 0.1$ & $174.5\pm 0.5$ & $342.3\pm 0.9$ & 85.6 &6.7
+			 &92.3
+			 
+			 \\
+			\hline
+		\end{tabular}\\
+		Таблица 3. Результаты эксперимента
+	\end{center}
+
+	Коэффициенты графика наилучшей прямой получены методом наименьших квадратов:
+	\begin{itemize}
+		\item a = -0.11248;
+		\item b = 92.55050.
+	\end{itemize}
+
+	\begin{tikzpicture}
+	\begin{axis}
+		[
+		width=13cm,
+		mark=square,
+		grid=major,
+		xlabel={T, $\tccelsius$},
+		ylabel={$\sigma$, $\frac{\text{мН}}{\text{м}}$},
+		]
+	
+		\addplot+[
+		only marks,
+		error bars/.cd,
+		y dir=both,
+		y explicit,
+		]
+		table[x=x,y=y,y error=yerror]
+		{
+			x        y       		   yerror
+			21.7     89.7308475            1.96133
+			25.7     89.7308475            1.96133
+			30.4     89.240515         	 1.96133
+			35.4   	 88.7501825           1.96133
+			40.4  	 88.01468375          1.96133
+			45.3  	 87.7695175    	       1.96133
+			51.0 	 86.7888525   	       1.96133
+			55.2 	 86.29852   	    	1.96133
+			60.0 	 85.56302125            1.96133
+		};
+	
+		\addplot+[
+		error bars/.cd,
+		y dir=both,
+		y explicit,
+		]
+		table[x=x,y=y,y error=yerror]
+		{
+			x        y       		   yerror
+			21.7     2.440878225 0
+			25.7     2.890809695 0
+			30.4     3.419479172  0
+			35.4   	 3.98189351 0
+			40.4  	 4.544307848 0
+			45.3  	 5.095473898 0
+			51.0 	 5.736626243 0
+			55.2 	 6.209054287 0
+			60.0 	 6.748972051 0
+		};
+		\addplot+[
+		error bars/.cd,
+		y dir=both,
+		y explicit,
+		]
+		table[x=x,y=y,y error=yerror]
+		{
+			x        y       		   yerror
+			21.7     92.17172573 		0
+			25.7     92.6216572	0
+			30.4     92.65999417	0
+			35.4   	 92.73207601	0
+			40.4  	 92.5589916	0
+			45.3  	 92.8649914	0
+			51.0 	 92.52547874	0
+			55.2 	 92.50757429	0
+			60.0 	 92.3119933	0
+		};
+	\addplot[domain = 20:65]{-0.112482868*x+92.55049805};
+	
+
+	\end{axis}
+	\end{tikzpicture}
+
+	Найдем погрешность коэффициента а 
+	\begin{center}
+		\begin{equation}
+			\begin{aligned}
+				\bigtriangleup_a = \sqrt{\frac{1}{9-2} \cdot (\frac{2.04}{158.9} - (-0.11248)^2)} = 0.07
+			\end{aligned}
+		\end{equation}
+	\end{center}
+	
+	Относительная погрешность: $\epsilon_a = \frac{0.07}{0.11248} = 0.62 \approx 62\%$ - достаточно большая погрешность. На это указывает и разброс значения y на графике.
+	
+	\begin{center}
+		\includegraphics[width= 12cm, height= 8cm]{"Таблица1.jpg"}\\
+		Рис. 2 Характеристики воды при разных температурах
+	\end{center}
+
+	\begin{center}
+	\includegraphics[width= 12cm, height= 8cm]{"Таблица2.jpg"}\\
+	Рис. 3 Характеристики этанола при разных температурах
+	\end{center}
+	
+	\section{Выводы}
+	\begin{itemize}
+		\item Формула (1) верна для нахождения радиуса капиляра. $r_2 \approx r_1$. Относительная погрешность равна $11.7\%$. Используя формулу (1) можно найти радиус иглы с большей точностью;
+		\item Коэффициент поверхностного натяжения действительно слабо зависит от изменения температуры, это видно из таблицы и графика (При изменение $\bigtriangleup T = 40 \tccelsius$ имеем изменение $\bigtriangleup \sigma = -4.1 \frac{\text{мН}}{\text{м}}$);
+		\item Полученный коэффициент наклона наилучшей прямой $\frac{d \sigma}{dT}$ отрицательна, что соответствует теории (поверхностное натяжение уменьшается с увелечением температуры);
+		\item При этом поверхностная энергии единицы площади практически остается const, а значит тепло идет на увеличение поверхности пленки.
+	\end{itemize}
+	
+\end{document}

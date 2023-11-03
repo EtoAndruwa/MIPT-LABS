@@ -1,0 +1,363 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{textcomp,mathcomp}
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{Huge}
+		\begin{center}
+			\textbf{Отчет о выполнении лабораторной работы 2.4.1}\\
+			\vspace{2em}
+			\textbf{Определение теплоты испарения жидкости}\\
+			\vspace{5em}
+			\textbf{Выполнил: }Тимонин Андрей\\
+			\textbf{Группа: }Б01-208\\
+			\vspace{9em}
+			\textbf{Дата: 15.05.2023}\\
+		\end{center}
+	\end{Huge}
+	
+	\section{Введение}
+	\noindent\textbf{Цели работы:}	
+	\begin{enumerate}
+		\item Измерение давления насыщенного пара жидкости при разной температуре;
+		\item Вычисление по полученным данным теплоты испарения с помощью уравнения Клапейрона-Клаузиса.
+	\end{enumerate}
+	\bigskip
+	
+	\noindent\textbf{В работе используются:}
+	\begin{enumerate}
+		\item Герметический сосуд, заполненный исследуемой жидкостью;
+		\item Отсчетный микроскоп;
+		\item Термостат;
+	\end{enumerate}
+	\section{Теоретическая справка}
+	\subsection{Уравнение Клапейрона-Клаузиуса}
+	Если считать что насыщенные пары подчиняются закона Менделеева-Клапейрона, и пренебречь удельным объемом жидкости относительно удельного объема паров то из уравнения Клапейрона-Клаузиуса получаем формулу для удельной теплоты испарения
+	
+	\begin{equation}\label{L}
+		L = \frac{RT^2}{\mu P}\frac{dP}{dT} = - \frac{R}{\mu} \frac{d(ln P)}{d(1/T)}
+	\end{equation}
+	
+	Как видим, если измерить зависимость давления насыщенных паров от температуры по формуле (\ref{L}) можно получить удельную теплоту испарения.
+	
+	\section{Экспериментальная установка}
+	\begin{center}
+		\includegraphics[width=15cm, height=10cm]{"Screenshot_4.jpg"}\\
+		Рис. 1 Схема установки для определения теплоты испарения\\
+	\end{center}
+ С помощью термостата A выставляется желаемая температура, и при помощи микроскопа C измеряется положение менисков ртути в U-образном манометре 15. Давление насыщенных паров считается как разность высот менисков ртути.
+	\section{Экспериментальные данные}
+	\begin{center}
+		\begin{tabular} {|c | c |c |c |}
+			\hline	
+			№ & $h_1$, мм &  $h_2$, мм  &  $T,$  \textcelsius \\
+			\hline
+			1 & 0.00 $\pm$ 0.01 &  24.20 $\pm$ 0.01 & 24.04 $\pm$ 0.01 \\
+			\hline
+			2 & -1.38 $\pm$ 0.01 & 25.46 $\pm$ 0.01 & 26.09 $\pm$ 0.01 \\
+			\hline
+			3 & -2.18 $\pm$ 0.01 & 27.20 $\pm$ 0.01 & 28.10 $\pm$ 0.01 \\
+\hline
+			4 & -4.33 $\pm$ 0.01 & 28.48 $\pm$ 0.01 & 30.13 $\pm$ 0.01 \\
+\hline
+			5 & -6.33 $\pm$ 0.01 & 30.49 $\pm$ 0.01 & 32.13 $\pm$ 0.01 \\
+\hline
+			6 & -8.27 $\pm$ 0.01 & 33.08 $\pm$ 0.01 & 34.12 $\pm$ 0.01 \\
+\hline
+			7 & -10.48 $\pm$ 0.01 & 35.43 $\pm$ 0.01 & 36.09 $\pm$ 0.01 \\
+\hline
+			8 & -13.88 $\pm$ 0.01 & 37.95 $\pm$ 0.01 & 38.14 $\pm$ 0.01 \\
+\hline
+			9 & -15.66 $\pm$ 0.01 & 40.62 $\pm$ 0.01 & 40.07 $\pm$ 0.01 \\
+\hline
+			10 & -18.15 $\pm$ 0.01 & 43.78 $\pm$ 0.01 & 42.12 $\pm$ 0.01 \\
+\hline
+			11 & -21.27 $\pm$ 0.01 & 47.29 $\pm$ 0.01 & 44.13 $\pm$ 0.01 \\
+\hline
+		\end{tabular}\\
+		Таблица 1. Результаты измерений при нагревании жидкости
+	\end{center}
+		\begin{center}
+		\begin{tabular} {|c | c |c |c |}
+			\hline	
+			№ & $h_1$, мм &  $h_2$, мм  &  $T,$  \textcelsius \\
+			\hline
+			1 & -26.52 $\pm$ 0.01  & 50.62 $\pm$ 0.01 & 46.06 $\pm$ 0.01 \\
+			\hline
+			2 & -21.44 $\pm$ 0.01 & 46.69 $\pm$ 0.01 & 44.13 $\pm$ 0.01 \\
+			\hline
+			3 & -18.06 $\pm$ 0.01 & 43.45 $\pm$ 0.01 & 41.97 $\pm$ 0.01 \\
+			\hline
+			4 & -15.43 $\pm$ 0.01 & 40.80 $\pm$ 0.01 & 39.95 $\pm$ 0.01 \\
+			\hline
+			5 & -13.13 $\pm$ 0.01 & 38.34 $\pm$ 0.01 & 37.97 $\pm$ 0.01 \\
+			\hline
+			6 & -10.88 $\pm$ 0.01 & 35.67 $\pm$ 0.01 & 35.96 $\pm$ 0.01 \\
+			\hline
+			7 & -8.57 $\pm$ 0.01 & 33.03 $\pm$ 0.01 & 33.94 $\pm$ 0.01 \\
+			\hline
+			8 & -6.54 $\pm$ 0.01 & 31.18 $\pm$ 0.01 & 31.95 $\pm$ 0.01 \\
+			\hline
+			9 & -4.80 $\pm$ 0.01 & 29.62 $\pm$ 0.01 & 30.10 $\pm$ 0.01 \\
+			\hline
+			10 & -3.30 $\pm$ 0.01 & 28.06 $\pm$ 0.01 & 28.26 $\pm$ 0.01 \\
+			\hline
+		\end{tabular}\\
+		Таблица 2. Результаты измерений при охлаждении жидкости
+	\end{center}
+
+
+	
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\begin{axis}
+				[
+				legend pos=north west,
+				width=13cm,
+				mark=square,
+				grid=major,
+				xlabel={$T, K$},
+				ylabel={$P, \text{Па}$},
+				]
+				
+				\legend{Нагревание, Охлаждение}
+				
+				\addplot+[
+				only marks,
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				table[x=x,y=y,y error=yerror]
+				{
+					x        y       		   yerror
+					297.04	3227.717592			1.3337676
+					299.09 3579.832238 		1.3337676
+					301.1	 3918.609209		 1.3337676
+				    303.13	4376.091496	 1.3337676	 
+					305.13	4910.932303		 1.3337676
+					307.12	5515.129026 	1.3337676
+					309.09	6123.327052	 1.3337676
+					 311.14	6912.917471 	1.3337676
+					313.07	7506.444053 	1.3337676
+					315.12	8260.022747 	1.3337676
+				};
+				
+				\addplot+[
+				only marks,
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				table[x=x,y=y,y error=yerror]
+				{
+					x        y       		   yerror
+					317.13	9086.958659		1.3337676
+				314.97 8204.004508	1.3337676
+				312.95 7499.775215	 1.3337676
+				310.97	6864.901837 1.3337676	 
+				308.96	6208.688178	 1.3337676
+				306.94	5548.473216	1.3337676
+				304.95	5030.971387	 1.3337676
+				303.1	4590.828079	1.3337676
+				301.26	4182.695194	1.3337676
+				299	3583.833541 1.3337676  
+				};
+			\addplot [
+			domain=295:318, 
+			color=green,
+			dashed,
+			]
+			{e^(-6.8835 + 0.0505*x)};
+			
+			\addplot [
+			domain=295:318, 
+			color=black,
+			]
+			{e^(-7.7412 + 0.0532*x)};
+
+				
+				
+			\end{axis}
+		\end{tikzpicture}\\
+		График 1. Зависимость $P Па$ от $T$  в эксперименте
+	\end{center}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}
+			[
+			legend pos=north east,
+			width=13cm,
+			mark=square,
+			grid=major,
+			xlabel={$\frac{1}{T}, K^{-1}$},
+			ylabel={$lnP$},
+			]
+			
+			\legend{Нагревание, Охлаждение}
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				0.00336655	8.079530539 0
+				0.003343475	8.183071218 0
+				0.003321156	8.273492076 0
+				0.003298915	8.383911252 0
+				0.003277292	8.499219081 0
+				0.003256056	8.615250327 0
+				0.003235304	8.719860864 0
+				0.003213987	8.841147038 0
+				0.003194174	8.923517138 0
+				0.003173394	9.01918262 0
+				
+			};
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+				0.003153281	9.11459555	0
+				0.003174906	9.012377669	0
+				0.003195399	8.922628328	0
+				0.003215744	8.834177019	0
+				0.003236665	8.733704909	0
+				0.003257966	8.621278073	0
+				0.003279226	8.523368363	0
+				0.003299241	8.431815696	0
+				0.003319392	8.338711101	0
+				0.003344482	8.184188328	0
+			};
+			\addplot [
+			domain=0.003135:0.00338, 
+			color=green,
+			dashed,
+			]
+			{-4982.98320264*x + 24.83835831};
+			
+			\addplot [
+			domain=0.003135:0.00338, 
+			color=black,
+			]
+			{-4792.53326642*x +24.23606027};
+			
+			
+			
+		\end{axis}
+	\end{tikzpicture}\\
+	График 2. Зависимость $lnP Па$ от $\frac{1}{t}$  в эксперименте
+\end{center}
+
+\subsection[График 2]{Анализ графика 2}	
+
+\noindent \textbf{Коэффициенты наклона графиков:}
+	\begin{itemize}
+		\item Шрихов. график - $k_1 = -4982.98$ (Нагревание)
+		\item Сплошной график - $k_2 = -4792.53$ (Охлаждение)
+	\end{itemize}
+
+\noindent \textbf{Погрешности коэффициентов наклона графиков из МНК:}
+\begin{itemize}
+	\item Шрихов. график - $\sigma_{k_1} = 64.36$ (Нагревание)
+	\item Сплошной график - $\sigma_{k_2} = 60.41$ (Охлаждение)
+\end{itemize}
+
+Отсюда по формуле имеем:
+
+ 	\begin{equation}
+ 		\begin{aligned}
+ 			 	 L_1 = - 8.31 \cdot -4982.98 = 41408.56 \simeq 41 \frac{ \text{кДж}}{ \text{моль}}  (\text{Нагревание})
+ 		\end{aligned} 
+ 	\end{equation}
+ 
+  	\begin{equation}
+ 	\begin{aligned}
+ 		L_2 = - 8.31 \cdot -4792.53 = 39825.92 \simeq 40 \frac{ \text{кДж}}{ \text{моль}}   (\text{Охлаждение})
+ 	\end{aligned} 
+ \end{equation}
+	
+\noindent \textbf{Итого имеем из графика 2:}
+ 	\begin{equation}
+	\begin{aligned}
+		L_1 = 41409 \pm 535 \frac{ \text{Дж}}{ \text{моль}}  (\text{Нагревание})
+	\end{aligned} 
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		L_2 =  39821 \pm 502 \frac{ \text{Дж}}{ \text{моль}}   (\text{Охлаждение})
+	\end{aligned} 
+\end{equation}
+
+\subsection[График 1]{Анализ графика 1}	
+
+Найдем теплоту испарения жидкости из первого графика используя формулу:
+
+\begin{equation}
+	\begin{aligned}
+		L = \frac{R \cdot T^{2}}{P} \cdot \frac{dP}{dT}
+	\end{aligned}
+\end{equation}
+
+\noindent\textbf{Уравнение касательной к графику функции:}
+	\begin{equation}
+		\begin{aligned}
+			 y = f(x_0) + f'(x_0) \cdot (x - x_0)
+		\end{aligned}
+	\end{equation}
+ 
+\noindent Тогда для первого графика для нагревания при T = 307.12 К имеем:
+
+\begin{equation}
+	\begin{aligned}
+		k_1 = 0.0532 \cdot e^{-7.7412  + 0.0532 \cdot 307.12} = 288.27 (\text{Нагревание})
+	\end{aligned}
+\end{equation}
+
+\noindent Для охлаждения при T = 308.96 K:
+\begin{equation}
+	\begin{aligned}
+		k_2 = 0.0505 \cdot e^{-6.8835 + 0.0505 \cdot 308.96} = 308.95 (\text{Охлаждение})
+	\end{aligned}
+\end{equation}
+
+\noindent \textbf{Итого имеем из графика 1:	}
+\begin{equation}
+	\begin{aligned}
+		L_1 = 288.27 \cdot \frac{8.31 \cdot 307.12^2}{5515.13} = 40969.10 \frac{ \text{Дж}}{ \text{моль}} (\text{Нагревание})
+	\end{aligned} 
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		L_2 = 308.95 \cdot \frac{8.31 \cdot 308.95^5}{6205.69} = 39488.95 \frac{ \text{Дж}}{\text{моль}} (\text{Охлаждение})
+	\end{aligned} 
+\end{equation}
+	
+	
+	
+	\section{Выводы}
+	\begin{itemize}
+		\item Оба графика дают приблизительно одни и те же значения теплоты испарения исследуемой жидкости;
+		\item Полученные результаты из графика 2 согласуются с табличным значением 40 $\frac{\textbf{кДж}}{\text{моль}}$;
+		\item Полученные погрешности коэффициентов наклона 2 графика не превышают 3\% ($\frac{535}{41409} = 0.0129 \simeq 1.3 \%$);
+	\end{itemize}
+	
+\end{document}

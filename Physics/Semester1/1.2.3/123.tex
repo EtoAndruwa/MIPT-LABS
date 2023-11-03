@@ -1,0 +1,98 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+	\begin{Huge}
+		\begin{center}
+			\textbf{Отчет о выполнении лабораторной работы 1.1.4}\\
+			\vspace{2em}
+			\textbf{Измерение интенсивности радиационного фона}\\
+			\vspace{5em}
+			\textbf{Выполнил: }Тимонин 	Андрей\\
+			\textbf{Группа: }Б01-208\\
+			\vspace{10em}
+			\textbf{Дата: }15.09.2022\\
+		\end{center}
+	\end{Huge}
+	
+	\begin{tikzpicture}
+		\begin{axis}[
+			title={Зависимость момента инерции I от квадрата расстояния h*h},
+			ylabel={Момент инерции I, кг*м*м},
+			xlabel={Квадрат расстояние h, м*м},
+			legend pos=north west,
+			grid= major,
+			width=15cm,
+			height=15cm,
+			samples=101
+			]
+			
+			\addplot[
+			color=black,
+			mark=x
+			]
+			coordinates {
+(0.00003136,0.008763596)
+(0.00012544,0.008967641)
+(0.00028224,0.009082806)
+(0.00050176,0.008982014)
+(0.000784,0.009073983)
+(0.00112896,0.009216677)
+(0.00153664,0.009618465)
+(0.00200704,0.009718033)
+(0.00254016,0.009800597)
+(0.003136,0.010080041)
+(0.00379456,0.010347012)
+(0.00451584,0.010646546)
+(0.00529984,0.010935609)
+(0.00614656,0.011382917)
+			};
+			
+			\addplot[
+			color=red,
+			mark=x
+			]
+			coordinates {
+(0.00003136,0.00882789)
+(0.00012544,0.008873412)
+(0.00028224,0.009041371)
+(0.00050176,0.009272911)
+(0.000784,0.009548724)
+(0.00112896,0.009906697)
+(0.00153664,0.010404524)
+(0.00200704,0.010815765)
+(0.00254016,0.011398026)
+(0.003136,0.012095082)
+(0.00379456,0.012705789)
+			};
+		
+		\addplot [
+		domain = 0:0.007,
+		samples = 50,
+		smooth,
+		thin,
+		green,
+		]{0.4028*x + 0.0088};
+		\addplot [
+		domain = 0:0.004,
+		samples = 50,
+		smooth,
+		thin,
+		blue,
+		]{1.0319*x + 0.0088};
+		
+		\end{axis}
+	\end{tikzpicture}
+	\\\\
+	$k = \frac{gRr}{4\pi ^2 z_0} = \frac{9.81 \cdot \frac{114.6}{1000} \cdot \frac{30.5}{1000}}{4 \cdot \pi ^2 \cdot \sqrt{L^2 - R^2}} = 0.0004026726$\\
+	
+	$\sigma_{z_0} = \sqrt{4\cdot(\frac{\sigma_{R}}{R})^2 + 4\cdot(\frac{\sigma_{L}}{L})^2}$\\\\
+	
+	$\sigma_{k} = \sqrt{(\frac{\sigma_{R}}{R})^2 + (\frac{\sigma_{r}}{r})^2 + (\frac{\sigma_{z_0}}{z_0})^2}$\\\\
+	
+	
+	
+\end{document}

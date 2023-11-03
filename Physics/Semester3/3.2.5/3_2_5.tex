@@ -1,0 +1,62 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english,russian]{babel}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{textcomp,mathcomp}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}
+			[
+			legend pos=north west,
+			width=13cm,
+			mark=square,
+			grid=major,
+			xlabel={$\frac{\nu}{\nu_0}$},
+			ylabel={$\frac{U}{U_0}$},
+			]
+			
+			\legend{Экспериментальные точки}
+			
+			\addplot+[
+			only marks,
+			error bars/.cd,
+			y dir=both,
+			y explicit,
+			]
+			table[x=x,y=y,y error=yerror]
+			{
+				x        y       		   yerror
+			0.967 0.826			0
+			0.979 0.895			0
+			0.991 0.942			0
+			1.003 0.979			0
+			1.014 0.958			0
+			1.026 0.916			0
+			1.038 0.868			0
+			1.05  0.821			0
+			1.062 0.753			0
+			1.073 0.705			0
+			1.084 0.647			0
+			1.097 0.605			0
+			1.109 0.558			0
+			1.121 0.532			0	
+			1.132 0.495			0
+			1.144 0.474			0
+			1.156 0.453			0
+			1.168 0.426			0
+			1.179 0.395			0
+			};
+			
+			
+			
+		\end{axis}
+	\end{tikzpicture}\\
+	График 3. Пункт 2.7 7)
+\end{center}
+	
+\end{document}
