@@ -1,0 +1,250 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2]{fontenc}
+\usepackage[warn]{mathtext}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{floatflt}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{ gensymb }
+\usepackage{ upgreek }
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm, footskip=10mm]{geometry}
+
+
+\graphicspath{ {images/} }
+\usepackage{multicol}
+\setlength{\columnsep}{2cm}
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace{5cm}
+	\vspace{4cm}
+	{\scshape\Large Лабораторная работа 3.4.2\par}
+	\vspace{1cm}
+	{\huge\bfseries Закон Кюри-Вейсса\par}
+	\vspace{1cm}
+	\vfill
+\begin{flushright}
+	\vspace{0.3cm}
+	{\LARGE Выполнил: Тимонин Андрей}
+\end{flushright}
+	
+
+	\vfill
+
+% Bottom of the page
+	Долгопрудный, 2023 г.
+\end{titlepage}
+
+\section{Цель работы}
+
+Изучение температурной зависимости магнитной восприимчивости ферромагнетика выше точки Кюри.
+
+\section{В работе используются:}
+\begin{itemize}
+    \item катушка самоиндуктивности с образцом из гадолиния;
+    \item термостат;
+    \item частотомер;
+    \item цифровой вольтметр;
+    \item LC-автогенератор;
+    \item термопара медь-константан;
+\end{itemize}
+
+\section{Ход работы}
+
+\begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|c|}
+        \cline{1-4}
+        № & $T, \celsius$ & $\Delta V, \text{В}$ & $\tau, \text{мкс}$\\ \cline{1-4}
+        1 & $14.13 \pm 0.01$ & $-0.000010 \pm 0.000001$& $10.065 \pm 0.001$\\ \cline{1-4}
+        2 & $16.03 \pm 0.01$& $-0.000011 \pm 0.000001$ & $9.956 \pm 0.001$\\ \cline{1-4}
+        3 & $18.03 \pm 0.01$& $-0.000012 \pm 0.000001$ & $9.711 \pm 0.001$\\ \cline{1-4}
+        4 & $20.02 \pm 0.01$& $-0.000013 \pm 0.000001$ & $9.410 \pm 0.001$\\ \cline{1-4}
+        5 & $22.01 \pm 0.01$& $-0.000018 \pm 0.000001$ & $9.046 \pm 0.001$\\ \cline{1-4}
+        6 & $24.01 \pm 0.01$& $-0.000023 \pm 0.000001$ & $8.760 \pm 0.001$\\ \cline{1-4}
+        7 & $26.01 \pm 0.01$& $-0.000012 \pm 0.000001$ & $8.602 \pm 0.001$\\ \cline{1-4}
+        8 & $28.00 \pm 0.01$& $-0.000019 \pm 0.000001$ & $8.536 \pm 0.001$\\ \cline{1-4}
+        9 & $30.00 \pm 0.01$& $-0.000018 \pm 0.000001$ & $8.487 \pm 0.001$\\ \cline{1-4}
+        10 & $32.00 \pm 0.01$& $-0.000020 \pm 0.000001$ & $8.454 \pm 0.001$\\ \cline{1-4}
+        11 & $34.00 \pm 0.01$& $-0.000019 \pm 0.000001$ & $8.428 \pm 0.001$\\ \cline{1-4}
+        12 & $36.00 \pm 0.01$& $-0.000019 \pm 0.000001$ & $8.411 \pm 0.001$\\ \cline{1-4}
+        13 & $38.00 \pm 0.01$& $-0.000019 \pm 0.000001$ & $8.395 \pm 0.001$\\ \cline{1-4}
+        14 & $40.00 \pm 0.01$& $-0.000020 \pm 0.000001$ & $8.383 \pm 0.001$\\ \cline{1-4}
+        
+        \end{tabular}
+        \caption{Данные эксперимента}
+        \label{tab:my_label}
+    \end{table}
+
+\begin{equation}
+    \Delta U_{\text{допустимая}} = \frac{0.5}{24} = 0.000021 \text{В}
+\end{equation}
+
+\textbf{ЗАМЕЧАНИЕ:} Необходимо учесть разность температур между водой и образцом используя показания термопары.
+
+\begin{equation}
+    \Delta T_{\text{поправка}} = 24000 \frac{\celsius}{\text{В}} \cdot \Delta V
+\end{equation}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        № & $\Delta T_{\text{поправка}}, \celsius$ & $T_{\text{итоговая}}, \celsius$\\ \cline{1-3}
+        1 & $-0.240 \pm 0.024$ & $13.890 \pm 0.034$\\ \cline{1-3}
+        2 & $-0.264 \pm 0.024$ & $15.766 \pm 0.034$\\ \cline{1-3}
+        3 & $-0.288 \pm 0.024$ & $17.742 \pm 0.034$\\ \cline{1-3}
+        4 & $-0.312 \pm 0.024$ & $19.708 \pm 0.034$\\ \cline{1-3}
+        5 & $-0.432 \pm 0.024$ & $21.578 \pm 0.034$\\ \cline{1-3}
+        6 & $-0.552 \pm 0.024$ & $23.458 \pm 0.034$\\ \cline{1-3}
+        7 & $-0.288 \pm 0.024$ & $25.722 \pm 0.034$\\ \cline{1-3}
+        8 & $-0.456 \pm 0.024$ & $27.544 \pm 0.034$\\ \cline{1-3}
+        9 & $-0.432 \pm 0.024$ & $29.568 \pm 0.034$\\ \cline{1-3}
+        10 & $-0.480 \pm 0.024$ & $31.520 \pm 0.034$\\ \cline{1-3}
+        11 & $-0.456 \pm 0.024$ & $33.544 \pm 0.034$\\ \cline{1-3}
+        12 & $-0.456 \pm 0.024$ & $35.544 \pm 0.034$\\ \cline{1-3}
+        13 & $-0.456 \pm 0.024$ & $37.544 \pm 0.034$\\ \cline{1-3}
+        14 & $-0.480 \pm 0.024$ & $39.520 \pm 0.034$\\ \cline{1-3}
+        
+        \end{tabular}
+        \caption{Поправки к температурам образца и итоговые температуры}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-2}
+        № &  $\tau^2 - \tau_0^2, \text{мкс}^2$\\ \cline{1-2}
+        1 &  $33.209 \pm 0.037$\\ \cline{1-2}
+        2 &  $31.026 \pm 0.036$ \\ \cline{1-2}
+        3 &  $26.208 \pm 0.036$  \\ \cline{1-2}
+        4 &  $20.453 \pm 0.035$  \\ \cline{1-2}
+        5 &  $13.717 \pm 0.035$  \\ \cline{1-2}
+        6 &  $8.625 \pm 0.034$  \\ \cline{1-2}
+        7 &  $5.899 \pm 0.034$  \\ \cline{1-2}
+        8 &  $4.768 \pm 0.034$  \\ \cline{1-2}
+        9 &  $3.934 \pm 0.033$  \\ \cline{1-2}
+        10 & $3.375 \pm 0.033$  \\ \cline{1-2}
+        11 &  $2.936 \pm 0.033$ \\ \cline{1-2}
+        12 &  $2.649 \pm 0.033$ \\ \cline{1-2}
+        13 &  $2.381 \pm 0.033$ \\ \cline{1-2}
+        14 &  $2.179 \pm 0.033$ \\ \cline{1-2}
+        
+        \end{tabular}
+        \caption{Данные для графика 1}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-2}
+        № &  $\frac{1}{\tau^2 - \tau_0^2}, \text{мкс}^{-2}$\\ \cline{1-2}
+        1 &  $0.030 \pm 0.001$ \\ \cline{1-2}
+        2 &  $0.032 \pm 0.001$ \\ \cline{1-2}
+        3 &  $0.038 \pm 0.001$ \\ \cline{1-2}
+        4 &  $0.049 \pm 0.002$ \\ \cline{1-2}
+        5 &  $0.073\pm 0.003$ \\ \cline{1-2}
+        6 &  $0.116\pm 0.004$ \\ \cline{1-2}
+        7 &  $0.170\pm 0.006$ \\ \cline{1-2}
+        8 &  $0.210\pm 0.007$ \\ \cline{1-2}
+        9 &  $0.254\pm 0.009$ \\ \cline{1-2}
+        10 & $0.296\pm 0.010$ \\ \cline{1-2}
+        11 & $0.341\pm 0.011$ \\ \cline{1-2}
+        12 & $0.377\pm 0.013$ \\ \cline{1-2}
+        13 & $0.420\pm 0.014$ \\ \cline{1-2}
+        14 & $0.459\pm 0.015$ \\ \cline{1-2}
+        
+        \end{tabular}
+        \caption{Данные для графика 2}
+        \label{tab:my_label}
+    \end{table}
+
+    
+
+    \begin{tikzpicture}
+    \begin{axis}
+    [
+        xlabel={$T, \celsius$}, 
+        ylabel={$\tau^2 - \tau_0^2, \text{мкс}^2$}, 
+        grid,
+        legend pos=north east,
+        height = 0.4\paperheight, 
+	width = 0.8\paperwidth,
+        title={График 1. Зависимость $\tau^2 - \tau_0^2$ от T},
+    ]
+    
+    \addplot[blue, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{graph1.txt};\
+
+    \addplot[red, domain=13:40]{-0.00000046574*x^7+0.00008699911*x^6-0.00678349062*x^5+0.28508966918*x^4-6.94453675364*x^3+97.67512396676*x^2-734.77532661281*x+2321.79252167450};
+
+    \addplot +[mark=none, black] coordinates {(22.705, 0) (22.705, 30)};
+    \addplot +[mark=none, blue] coordinates {(13.89, 0) (13.89, 35)};
+    \addplot +[mark=none, blue] coordinates {(31.52, 0) (31.52, 35)};
+
+    \addlegendentry{Экспериментальные данные}
+    \addlegendentry{Аппроксимация полиномом 5-й степени}
+    
+    \end{axis}
+    \end{tikzpicture}
+
+Уравнение полинома 5-ой степени:
+    \begin{equation*}
+    \begin{split}
+        y = -0.00000046574\cdotx^7+0.00008699911\cdotx^6-0.00678349062\cdotx^5+0.28508966918\cdotx^4 -\\-6.94453675364\cdotx^3
+        +97.67512396676\cdotx^2-734.77532661281\cdotx+2321.79252167450
+    \end{split}
+    \end{equation*}
+
+    Точка Кюри для гадолиния лежит посередине отрезка $\uptheta_K = \frac{T{\text{макс}} - T{\text{мин}}}{2}$ 
+
+    Точка Кюри для гадолиния:
+    \begin{equation}
+        \uptheta_K = \frac{31.52 + 13.89}{2} = 22.705 \pm 0.048 \celsius (295.855 \pm 0.048 K)
+    \end{equation}
+
+    Табличное значение точки Кюри для гадолиния: $\uptheta_K_{\text{теор}} = 18.85 \celsius (292 K)$ 
+
+    Погрешность экспериментального значения: $\delta \uptheta_K = \frac{22.705 - 18.85}{18.85} \cdot 100 \% = 20.45\%$ 
+    
+     \begin{tikzpicture}
+    \begin{axis}
+    [
+        xlabel={$T, \celsius$}, 
+        ylabel={$\frac{1}{\tau^2 - \tau_0^2}, \text{мкс}^{-2}$}, 
+        grid,
+        legend pos=north west,
+        height = 0.4\paperheight, 
+	width = 0.8\paperwidth,
+        legend pos=north west,
+        title={График 2. Зависимость $\frac{1}{\tau^2 - \tau_0^2}$ от T},
+    ]
+    
+    \addplot[red, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{graph2.txt};\
+
+    \addplot[black, domain=17:40]{x*0.0215 -0.3849};
+    \addplot[black, domain=14:20]{0};
+
+
+    \addlegendentry{Экспериментальные данные}
+    \addlegendentry{Аппроксимация для парамагнитной точки Кюри(0.0215$\cdot$x-0.3849)}
+
+    
+    \end{axis}
+    \end{tikzpicture}
+
+Погрешности аппроксимации для парамагнитной точки Кюри $\Delta k = 0.0002 \frac{1}{\text{мкс}^{2} \cdot \celsius}, \Delta b = 0.0073 \text{мкс}^{-2}$ 
+
+Парамагнитная точка Кюри из графика 2 (пересечение с осью абцисс) $\uptheta _p = 17.90 \pm 0.51 \celsius (291.05 \pm 0.51 K)$
+
+
+\end{document}

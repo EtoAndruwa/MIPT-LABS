@@ -1,0 +1,254 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2]{fontenc}
+\usepackage[warn]{mathtext}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{floatflt}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm, footskip=10mm]{geometry}
+
+
+\graphicspath{ {images/} }
+\usepackage{multicol}
+\setlength{\columnsep}{2cm}
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vspace{5cm}
+	\vspace{4cm}
+	{\scshape\Large Лабораторная работа 3.4.1\par}
+	\vspace{1cm}
+	{\huge\bfseries Измерение магнитной восприимчивости диа- и парамагнетиков\par}
+	\vspace{1cm}
+	\vfill
+\begin{flushright}
+	\vspace{0.3cm}
+	{\LARGE Выполнил: Тимонин Андрей}
+\end{flushright}
+	
+
+	\vfill
+
+% Bottom of the page
+	Долгопрудный, 2023 г.
+\end{titlepage}
+
+\section{Цель работы}
+
+Измерение магнитной восприимчивости диа- и парамагнитных образцов.
+
+\section{В работе используются:}
+\begin{itemize}
+    \item электромагнит;
+    \item аналитические весы;
+    \item милливеберметр;
+    \item регулируемый источник постоянного тока;
+    \item образцы (медь, графит, алюминий, вольфрам);
+\end{itemize}
+
+\section{Ход работы}
+
+\begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|c|}
+        \cline{1-4}
+        № & I, А & $\text{Ф}, \text{мВб}$ & B, $\text{Тл}$\\ \cline{1-4}
+        1&  $0.37\pm 0.01$& $0.8\pm 0.1$ &$0.111 \pm 0.014$\\ \cline{1-4}
+        2&  $0.74\pm 0.01$& $1.7\pm 0.1$ &$0.236 \pm 0.014$\\ \cline{1-4}
+        3&  $1.11\pm 0.01$& $2.5\pm 0.1$ &$0.347 \pm 0.014$\\ \cline{1-4}
+        4&  $1.48\pm 0.01$& $3.3\pm 0.1$ &$0.458 \pm 0.014$\\ \cline{1-4}
+        5&  $1.85\pm 0.01$& $4.1\pm 0.1$ &$0.569 \pm 0.014$\\ \cline{1-4}
+        6&  $2.22\pm 0.01$& $4.8\pm 0.1$ &$0.667 \pm 0.014$\\ \cline{1-4}
+        7&  $2.59\pm 0.01$& $5.5\pm 0.1$ &$0.764 \pm 0.014$\\ \cline{1-4}
+        8&  $3.06\pm 0.01$& $6.2\pm 0.1$ &$0.861 \pm 0.014$\\ \cline{1-4}
+        \end{tabular}
+        \caption{Градуировка электромагнита}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        № & m, $\text{г}$ & $\Delta P, \text{H} \cdot 10^{-3}$\\ \cline{1-3}
+        1&  $150.700\pm 0.001$& $-0.647 \pm 0.020$\\ \cline{1-3}
+        2&  $150.780\pm 0.001$& $0.137 \pm 0.020$\\ \cline{1-3}
+        3&  $150.790\pm 0.001$& $0.235 \pm 0.020$\\ \cline{1-3}
+        4&  $150.811\pm 0.001$& $0.441 \pm 0.020$\\ \cline{1-3}
+        5&  $150.831\pm 0.001$& $0.638 \pm 0.020$\\ \cline{1-3}
+        6&  $150.857\pm 0.001$& $0.893 \pm 0.020$\\ \cline{1-3}
+        7&  $150.890\pm 0.001$& $1.216 \pm 0.020$\\ \cline{1-3}
+        8&  $150.920\pm 0.001$& $1.511 \pm 0.020$\\ \cline{1-3}
+        \end{tabular}
+        \caption{Данные для вольфрама}
+        \label{tab:my_label}
+    \end{table}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        № & m, $\text{г}$ & $\Delta P, \text{H}\cdot 10^{-3}$\\ \cline{1-3}
+        1&  $83.378\pm 0.001$& $0.010 \pm 0.020$\\ \cline{1-3}
+        2&  $83.378\pm 0.001$& $0.010 \pm 0.020$\\ \cline{1-3}
+        3&  $83.377\pm 0.001$& $0.000 \pm 0.020$\\ \cline{1-3}
+        4&  $83.376\pm 0.001$& $-0.010 \pm 0.020$\\ \cline{1-3}
+        5&  $83.374\pm 0.001$& $-0.029 \pm 0.020$\\ \cline{1-3}
+        6&  $83.372\pm 0.001$& $-0.049 \pm 0.020$\\ \cline{1-3}
+        7&  $83.367\pm 0.001$& $-0.098 \pm 0.020$\\ \cline{1-3}
+        8&  $83.367\pm 0.001$& $-0.098 \pm 0.020$\\ \cline{1-3}
+        \end{tabular}
+        \caption{Данные для меди}
+        \label{tab:my_label}
+    \end{table}
+
+        \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        № & m, $\text{г}$ & $\Delta P, \text{H}\cdot 10^{-3}$\\ \cline{1-3}
+        1&  $25.221\pm 0.001$& $0.020 \pm 0.020$\\ \cline{1-3}
+        2&  $25.225\pm 0.001$& $0.059 \pm 0.020$\\ \cline{1-3}
+        3&  $25.231\pm 0.001$& $0.118 \pm 0.020$\\ \cline{1-3}
+        4&  $25.236\pm 0.001$& $0.167 \pm 0.020$\\ \cline{1-3}
+        5&  $25.250\pm 0.001$& $0.304 \pm 0.020$\\ \cline{1-3}
+        6&  $25.260\pm 0.001$& $0.402 \pm 0.020$\\ \cline{1-3}
+        7&  $25.271\pm 0.001$& $0.510 \pm 0.020$\\ \cline{1-3}
+        8&  $25.285\pm 0.001$& $0.647 \pm 0.020$\\ \cline{1-3}
+        \end{tabular}
+        \caption{Данные для алюминия}
+        \label{tab:my_label}
+    \end{table}
+
+        \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        № & m, $\text{г}$ & $\Delta P, \text{H}\cdot 10^{-3}$\\ \cline{1-3}
+        1&  $11.574\pm 0.001$& $-0.108 \pm 0.020$\\ \cline{1-3}
+        2&  $11.607\pm 0.001$& $-0.432 \pm 0.020$\\ \cline{1-3}
+        3&  $11.641\pm 0.001$& $-0.765 \pm 0.020$\\ \cline{1-3}
+        4&  $11.683\pm 0.001$& $-1.177 \pm 0.020$\\ \cline{1-3}
+        5&  $11.725\pm 0.001$& $-1.589 \pm 0.020$\\ \cline{1-3}
+        6&  $11.738\pm 0.001$& $-1.717 \pm 0.020$\\ \cline{1-3}
+        7&  $11.765\pm 0.001$& $-1.982 \pm 0.020$\\ \cline{1-3}
+        8&  $11.802\pm 0.001$& $-2.345 \pm 0.020$\\ \cline{1-3}
+        \end{tabular}
+        \caption{Данные для графита}
+        \label{tab:my_label}
+    \end{table}
+
+    
+
+    \begin{tikzpicture}
+    \begin{axis}
+    [
+        xlabel={$I, A$}, 
+        ylabel={$B, \text{Тл}$}, 
+        grid,
+        legend pos=north west,
+        height = 0.4\paperheight, 
+	width = 0.8\paperwidth,
+        title={График зависимости B электромагнита от I через него},
+    ]
+    
+    \addplot[blue, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{B_ot_I.txt};\
+
+    \addplot[red, domain=0:3.2]{x*0.2815 + 0.0295};
+
+    \addlegendentry{B(I)}
+    \addlegendentry{0.2815$\cdot x$ + 0.029}
+    
+    \end{axis}
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+    \begin{axis}
+    [
+        ylabel={$\Delta, P, H\cdot 10^{-3}$}, 
+        xlabel={$B^2, \text{Тл}^2$}, 
+        grid,
+        legend pos=north west,
+        height = 0.4\paperheight, 
+	width = 0.8\paperwidth,
+        title={График зависимости $\Delta P$ на образец от $B^2$},
+    ]
+    
+    \addplot[blue, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{volfr.txt};\
+    
+    \addplot[red, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{copper.txt};\
+
+    \addplot[green, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{alum.txt};\
+
+    \addplot[magenta, mark=x, only marks] plot [error bars/.cd, y dir = both, y explicit]
+    table[x =x, y =y, y error =ey, x error =ex]{carbon.txt};\
+
+    \addplot[black, domain=0:0.8]{x*0.1778 - 0.0245};
+    \addplot[black, domain=0:0.8]{x*2.036 + 0.0031};
+    \addplot[black, domain=0:0.8]{x*2.8998 + 0.3609};
+    \addplot[black, domain=0:0.8]{x*0.8646 +0.009};
+
+    \addlegendentry{Вольфрам}
+    \addlegendentry{Медь}
+    \addlegendentry{Алюминий}
+    \addlegendentry{Углерод}
+    
+    \end{axis}
+    \end{tikzpicture}
+
+    \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|c|}
+        \cline{1-3}
+        Образец & k, $H \cdot 10^{-3} \cdot \text{Тл}^{-2}$ & $b, H\cdot 10^{-3}$\\ \cline{1-3}
+        $\text{Вольфрам}$&  $2.0360 \pm 0.0341$& $0.0031 \pm 0.0144$\\ \cline{1-3}
+        $\text{Медь}$&  $0.1778 \pm 0.0215$& $-0.0245 \pm 0.0098$\\ \cline{1-3}
+        $\text{Алюминий}$& $0.8646 \pm 0.0177$& $0.0090 \pm 0.0070$\\ \cline{1-3}
+        $\text{Углерод}$&  $2.8998 \pm 0.2994$& $0.3609 \pm 0.1186$\\ \cline{1-3}
+       
+        \end{tabular}
+        \caption{Данные коэффициентов аппроксимации графиков}
+        \label{tab:my_label}
+    \end{table}
+
+        \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|}
+        \cline{1-2}
+        Образец & $\chi$\\ \cline{1-2}
+        $\text{Вольфрам}$&  $5.5 \cdot 10^{-5}$\\ \cline{1-2}
+        $\text{Медь}$&  $-6.4\cdot 10^{-6}$\\ \cline{1-2}
+        $\text{Алюминий}$& $2.2 \cdot 10^{-5}$\\ \cline{1-2}
+        $\text{Углерод}$& $-8.5 \cdot 10^{-5}$ \\ \cline{1-2}
+       
+        \end{tabular}
+        \caption{Табличные значения магнитной восприимчивости металлов}
+        \label{tab:my_label}
+    \end{table}
+
+            \begin{table}[h]
+    \centering
+        \begin{tabular}{|c|c|}
+        \cline{1-2}
+        Образец & $\chi$\\ \cline{1-2}
+        $\text{Вольфрам}$& $(6.5 \pm 2.7) \cdot 10^{-5}$  \\ \cline{1-2}
+        $\text{Медь}$&  $(-5.7 \pm 3.0)\cdot 10^{-6}$\\ \cline{1-2}
+        $\text{Алюминий}$& $(2.8 \pm 1.2)\cdot 10^{-5}$ \\ \cline{1-2}
+        $\text{Углерод}$& $(-9.2  \pm 4.6)\cdot 10^{-5}$ \\ \cline{1-2}
+       
+        \end{tabular}
+        \caption{Экспериментальные значения магнитной восприимчивости металлов}
+        \label{tab:my_label}
+    \end{table}
+
+\end{document}
